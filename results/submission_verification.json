@@ -11,8 +11,8 @@
   "unit_tests_passed": 15,
   "report_pages": 78,
   "figures": 16,
-  "tables": 72,
-  "code_listings": 34,
-  "report_sha256": "612fbf0dbb8d13267fd91744803b7419113828226537d745f78af340095090b2",
+  "tables": 74,
+  "code_listings": 31,
+  "report_sha256": "460d75441ae3f724bec0ae9c7a50d42c4e6eaea9155d000d63413138a7a16981",
   "status": "passed"
 }

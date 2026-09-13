@@ -77,19 +77,19 @@
     ],
     [
       16,
-      "Pilot thiếu BN Dense và phiên bản cuối: validation loss trong TensorFlow.",
+      "Validation loss TensorFlow của kiến trúc chưa có và có BN sau Dense.",
       68
     ]
   ],
   "tables": [
     [
       1,
-      "Các thành phần của bài nộp.",
+      "Các nội dung và phương pháp khảo sát chính.",
       2
     ],
     [
       2,
-      "Đối chiếu yêu cầu Assignment 04.",
+      "Mục tiêu và cấu trúc nghiên cứu.",
       6
     ],
     [
@@ -164,7 +164,7 @@
     ],
     [
       17,
-      "Bối cảnh kiến trúc; các mạng tham khảo không được huấn luyện trong bài.",
+      "Bối cảnh kiến trúc; các mạng tham khảo không được huấn luyện trong nghiên cứu này.",
       21
     ],
     [
@@ -219,12 +219,12 @@
     ],
     [
       28,
-      "Những khác biệt biểu diễn cần được chuyển đổi đúng.",
+      "Các quy ước biểu diễn và ánh xạ giữa framework.",
       34
     ],
     [
       29,
-      "Số lượt và phạm vi của bản mở rộng.",
+      "Quy mô và phạm vi của giao thức thực nghiệm.",
       35
     ],
     [
@@ -284,12 +284,12 @@
     ],
     [
       41,
-      "Các thao tác cần có trong bước học.",
+      "Các thao tác của bước cập nhật minibatch.",
       48
     ],
     [
       42,
-      "Những dữ liệu cần phối hợp khi khôi phục một lượt.",
+      "Dữ liệu xác định trạng thái khôi phục của một lượt.",
       49
     ],
     [
@@ -334,7 +334,7 @@
     ],
     [
       51,
-      "Bài học kỹ thuật từ ba cách triển khai.",
+      "Đặc điểm của ba cách triển khai CNN.",
       57
     ],
     [
@@ -394,7 +394,7 @@
     ],
     [
       63,
-      "Các giá trị train/validation của thử nghiệm ban đầu.",
+      "Các giá trị train/validation trong khảo sát sơ bộ kiến trúc.",
       68
     ],
     [
@@ -404,7 +404,7 @@
     ],
     [
       65,
-      "Kiểm chứng dữ liệu kết quả, checkpoint và notebook trước đóng gói.",
+      "Kết quả đối chiếu dữ liệu, trạng thái mô hình và thực thi notebook.",
       69
     ],
     [
@@ -424,21 +424,31 @@
     ],
     [
       69,
-      "Thứ tự đọc tám notebook trong bài nộp.",
-      76
+      "Các thành phần xác định điều kiện tái lập.",
+      75
     ],
     [
       70,
+      "Các mức kiểm tra phục vụ tái lập thực nghiệm.",
+      75
+    ],
+    [
+      71,
+      "Nội dung của tám notebook thực nghiệm.",
+      76
+    ],
+    [
+      72,
       "Cấu trúc thư mục phân biệt nhóm thí nghiệm.",
       76
     ],
     [
-      71,
+      73,
       "54 lượt chính; accuracy của checkpoint chọn bằng validation loss.",
       77
     ],
     [
-      72,
+      74,
       "18 lượt ablation; không đưa pilot vào bảng này.",
       78
     ]
@@ -461,7 +471,7 @@
     ],
     [
       4,
-      "Các điều kiện cấu trúc cần thỏa trước huấn luyện.",
+      "Các điều kiện cấu trúc được kiểm tra trước huấn luyện.",
       26
     ],
     [
@@ -481,7 +491,7 @@
     ],
     [
       8,
-      "Giao diện và chiều duyệt của forward/backward, rút gọn từ source.",
+      "Giao diện và chiều duyệt của forward/backward, rút gọn từ mã nguồn.",
       36
     ],
     [
@@ -571,7 +581,7 @@
     ],
     [
       26,
-      "Một số thiết lập của lượt huấn luyện PyTorch trong bài.",
+      "Một số thiết lập của lượt huấn luyện PyTorch trong nghiên cứu này.",
       51
     ],
     [
@@ -598,21 +608,6 @@
       31,
       "Cấu hình bộ nhớ trước tạo model và khôi phục weights.",
       56
-    ],
-    [
-      32,
-      "Lệnh tạo môi trường mới trong Anaconda Prompt; đổi đường dẫn dữ liệu nếu cần.",
-      75
-    ],
-    [
-      33,
-      "Các lệnh giao thức và tái tạo kết quả; runner bỏ qua lượt hoàn chỉnh khớp cấu hình.",
-      75
-    ],
-    [
-      34,
-      "Các lệnh kiểm tra; phiên bản chạy và đầu ra được lưu trong results.",
-      78
     ]
   ]
 }

@@ -8,7 +8,7 @@ Bài làm theo yêu cầu trong ảnh: khám phá CNN, cải tiến CNN, cài đ
 
 ## Bản mở rộng: nhiều seed và đánh giá thành phần
 
-[Báo cáo PDF 78 trang](report/Assignment04_NguyenNgocHoangNam_B23DCCN585.pdf) có lý thuyết, lý do thiết kế, ví dụ số học xuyên suốt, 34 đoạn code minh họa và phân tích kết quả thực tế. Có **16 hình, 72 bảng**; 8 notebook đã thực thi **60 ô code không lỗi**. Metric của 72 lượt đã được tính lại, 72 checkpoint đã được tải trong tiến trình CPU mới và đối chiếu sáu ảnh cố định; 15 unit test đạt.
+[Báo cáo PDF 78 trang](report/Assignment04_NguyenNgocHoangNam_B23DCCN585.pdf) trình bày mục tiêu nghiên cứu, cơ sở lý thuyết, phương pháp, ví dụ số học, 31 đoạn mã thuật toán và phân tích kết quả thực tế. Có **16 hình, 74 bảng**; phụ lục đặc tả điều kiện tái lập, còn lệnh cài đặt và thực thi nằm trong README. 8 notebook đã thực thi **60 ô code không lỗi**. Metric của 72 lượt đã được tính lại, 72 checkpoint đã được tải trong tiến trình CPU mới và đối chiếu sáu ảnh cố định; 15 unit test đạt.
 
 **Accuracy improved, trung bình ± SD mẫu của 3 seed (%):**
 
