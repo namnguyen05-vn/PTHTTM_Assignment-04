@@ -1,0 +1,39 @@
+{
+  "dataset": "cifar100",
+  "backend": "numpy",
+  "variant": "baseline",
+  "epochs": 12,
+  "batch_size": 128,
+  "seed": 7,
+  "learning_rate": 0.001,
+  "optimizer": "Adam",
+  "adam_beta1": 0.9,
+  "adam_beta2": 0.999,
+  "adam_epsilon": 1e-08,
+  "normalization": "uint8 / 255",
+  "train_samples": 45000,
+  "validation_samples": 5000,
+  "test_samples": 10000,
+  "device": "CPU",
+  "framework_version": "1.23.5",
+  "python": "3.10.20 | packaged by Anaconda, Inc. | (main, Jun 11 2026, 15:13:20) [MSC v.1942 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "parameter_count": 73492,
+  "selection": "minimum validation cross-entropy",
+  "augmentation": false,
+  "training_scope": "all predefined training samples, no subsampling",
+  "ablation": null,
+  "split_seed": 42,
+  "cpu_thread_pools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "E:\\PTHTTM\\ASG_04_runtime\\env\\Lib\\site-packages\\numpy\\.libs\\libopenblas.FB5AE2TYXYH2IJRDKGDGQ3XBKLKTF43H.gfortran-win_amd64.dll",
+      "version": "0.3.20",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "dataset": "cifar10",
+  "reference": "PyTorch seed 42 fixed for all datasets",
+  "both_correct": 5246,
+  "corrected": 1280,
+  "regressed": 1057,
+  "both_wrong": 2417,
+  "corrected_example_ids": [
+    3,
+    12,
+    17,
+    22
+  ],
+  "regressed_example_ids": [
+    2,
+    7,
+    10,
+    26
+  ]
+}

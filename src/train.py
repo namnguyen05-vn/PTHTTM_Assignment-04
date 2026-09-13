@@ -19,10 +19,21 @@ def classification_metrics(y,logits,k):
     if k>=5:result['top5_accuracy']=float(np.any(np.argsort(logits,axis=1)[:,-5:]==y[:,None],axis=1).mean())
     return result,cm
 
-def _train(backend,dataset,variant,epochs=None,batch_size=128,seed=42,force=False):
+def experiment_dir(backend,dataset,variant,seed=42,ablation=None):
+    name=f'{dataset}_{backend}_{variant}'
+    if ablation:return ROOT/'results'/'ablation'/f'seed_{seed}'/(name+'_'+ablation)
+    if seed!=42:return ROOT/'results'/'multiseed'/f'seed_{seed}'/name
+    return ROOT/'results'/name
+
+def _train(backend,dataset,variant,epochs=None,batch_size=128,seed=42,force=False,ablation=None):
+    if ablation and (backend!='pytorch' or variant!='improved'):
+        raise ValueError('Ablation requires the PyTorch improved architecture.')
     cfg=DATASETS[dataset];epochs=epochs or cfg['epochs']
-    out=ROOT/'results'/f'{dataset}_{backend}_{variant}';out.mkdir(parents=True,exist_ok=True)
+    out=experiment_dir(backend,dataset,variant,seed,ablation);out.mkdir(parents=True,exist_ok=True)
     if (out/'metrics.json').exists() and not force:
+        saved=json.loads((out/'config.json').read_text())
+        for key,value in dict(seed=seed,epochs=epochs,batch_size=batch_size,ablation=ablation).items():
+            if saved.get(key)!=value:raise ValueError(f'Existing {out}: {key} differs; use --force or another seed.')
         return json.loads((out/'metrics.json').read_text())
     data=load_data(dataset);x,y=data['x'],data['y'];ti,vi=data['train_ids'],data['val_ids']
     spec=dict(channels=cfg['channels'],size=cfg['size'],classes=cfg['classes'],variant=variant,seed=seed)
@@ -46,6 +57,7 @@ def _train(backend,dataset,variant,epochs=None,batch_size=128,seed=42,force=Fals
         device='cuda' if torch.cuda.is_available() else 'cpu';version=torch.__version__
         model=TorchCNN(cfg['channels'],cfg['size'],cfg['classes'],variant);model.load_numpy(state);model.to(device)
         assert sum(p.numel() for p in model.parameters())==params
+        model.ablate(ablation);params=sum(p.numel() for p in model.parameters())
         optimizer=torch.optim.Adam(model.parameters(),lr=1e-3,eps=1e-8)
         def predict(b):
             model.eval()
@@ -89,9 +101,11 @@ def _train(backend,dataset,variant,epochs=None,batch_size=128,seed=42,force=Fals
         def restore():model.load_weights(str(out/'weights.h5'))
     else:raise ValueError(backend)
     history=[];best=float('inf');best_epoch=0;train_seconds=0;val_seconds=0
-    print(f'START {dataset} {backend} {variant}: train={len(ti)} val={len(vi)} epochs={epochs} device={device} params={params}',flush=True)
+    print(f'START {dataset} {backend} {variant} seed={seed} ablation={ablation}: train={len(ti)} val={len(vi)} epochs={epochs} device={device} params={params}',flush=True)
     config=dict(dataset=dataset,backend=backend,variant=variant,epochs=epochs,batch_size=batch_size,seed=seed,learning_rate=0.001,optimizer='Adam',adam_beta1=0.9,adam_beta2=0.999,adam_epsilon=1e-8,normalization='uint8 / 255',train_samples=len(ti),validation_samples=len(vi),test_samples=len(data['y_test']),device=device,framework_version=version,python=sys.version,platform=platform.platform(),parameter_count=params,selection='minimum validation cross-entropy',augmentation=False,training_scope='all predefined training samples, no subsampling')
     from threadpoolctl import threadpool_info
+    config['ablation']=ablation
+    config['split_seed']=42
     config['cpu_thread_pools']=threadpool_info()
     (out/'config.json').write_text(json.dumps(config,indent=2),encoding='utf-8')
     for epoch in range(1,epochs+1):
@@ -113,7 +127,7 @@ def _train(backend,dataset,variant,epochs=None,batch_size=128,seed=42,force=Fals
     infer_seconds=time.perf_counter()-ts
     metrics,cm=classification_metrics(yt,logits,cfg['classes'])
     metrics.update({k:config[k] for k in ['dataset','backend','variant','parameter_count','train_samples','validation_samples','test_samples','device']})
-    metrics.update(epochs=epochs,best_epoch=best_epoch,best_val_loss=best,train_seconds=train_seconds,validation_seconds=val_seconds,test_seconds=infer_seconds)
+    metrics.update(seed=seed,ablation=ablation,epochs=epochs,best_epoch=best_epoch,best_val_loss=best,train_seconds=train_seconds,validation_seconds=val_seconds,test_seconds=infer_seconds)
     shifted=logits-logits.max(1,keepdims=True);probs=np.exp(shifted);probs/=probs.sum(1,keepdims=True)
     with (out/'predictions.csv').open('w',newline='',encoding='utf-8') as f:
         writer=csv.writer(f);writer.writerow(['test_id','true_label','predicted_label','confidence'])
@@ -124,17 +138,18 @@ def _train(backend,dataset,variant,epochs=None,batch_size=128,seed=42,force=Fals
     print('COMPLETE '+json.dumps(metrics),flush=True)
     return metrics
 
-def train(backend,dataset,variant,epochs=None,batch_size=128,seed=42,force=False):
+def train(backend,dataset,variant,epochs=None,batch_size=128,seed=42,force=False,ablation=None):
     # A notebook and the CLI may request the same configuration concurrently.
     # Serialize that configuration; after waiting, reuse its complete results.
     from filelock import FileLock
-    folder=ROOT/'results'/f'{dataset}_{backend}_{variant}'
+    folder=experiment_dir(backend,dataset,variant,seed,ablation)
     folder.mkdir(parents=True,exist_ok=True)
     with FileLock(str(folder/'.train.lock'),timeout=7200):
-        return _train(backend,dataset,variant,epochs,batch_size,seed,force)
+        return _train(backend,dataset,variant,epochs,batch_size,seed,force,ablation)
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--backend',choices=['numpy','pytorch','tensorflow'],required=True)
     p.add_argument('--dataset',choices=list(DATASETS),required=True);p.add_argument('--variant',choices=['baseline','improved'],default='baseline')
     p.add_argument('--epochs',type=int);p.add_argument('--batch-size',type=int,default=128);p.add_argument('--seed',type=int,default=42);p.add_argument('--force',action='store_true')
+    p.add_argument('--ablation',choices=['no_bn','no_skip','no_dropout'])
     train(**vars(p.parse_args()))

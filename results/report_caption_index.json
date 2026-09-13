@@ -1,0 +1,618 @@
+{
+  "figures": [
+    [
+      1,
+      "Ảnh MNIST và tám đáp ứng Conv1 + ReLU của NumPy baseline seed 42; từng map dùng thang màu riêng.",
+      10
+    ],
+    [
+      2,
+      "Ảnh MNIST lấy từ phần train; hai ví dụ cho mỗi lớp.",
+      23
+    ],
+    [
+      3,
+      "Số mẫu train của các chữ số sau chia validation.",
+      23
+    ],
+    [
+      4,
+      "Ảnh CIFAR-10 từ phần train theo tên lớp gốc.",
+      24
+    ],
+    [
+      5,
+      "Phân bố train CIFAR-10 cân bằng giữa mười lớp.",
+      24
+    ],
+    [
+      6,
+      "Một số lớp CIFAR-100; hình minh họa không đại diện toàn bộ 100 lớp.",
+      25
+    ],
+    [
+      7,
+      "Phân bố train CIFAR-100 theo 100 nhãn fine.",
+      25
+    ],
+    [
+      8,
+      "Validation MNIST: đường trung bình và vùng ±1 SD; nét đứt baseline, nét liền improved.",
+      59
+    ],
+    [
+      9,
+      "Hàng trên: được sửa; hàng dưới: sai thêm. T: nhãn thật, B: baseline, I: improved.",
+      60
+    ],
+    [
+      10,
+      "Validation CIFAR-10: đường trung bình và vùng ±1 SD; nét đứt baseline, nét liền improved.",
+      61
+    ],
+    [
+      11,
+      "Hàng trên: được sửa; hàng dưới: sai thêm. T: nhãn thật, B: baseline, I: improved.",
+      62
+    ],
+    [
+      12,
+      "Validation CIFAR-100: đường trung bình và vùng ±1 SD; nét đứt baseline, nét liền improved.",
+      63
+    ],
+    [
+      13,
+      "Gộp nhãn fine thành 20 nhóm coarse sau dự đoán; chuẩn hóa theo nhãn thật.",
+      64
+    ],
+    [
+      14,
+      "Accuracy và SD của full cùng ba biến thể tắt thành phần.",
+      66
+    ],
+    [
+      15,
+      "Accuracy và SD của full cùng ba biến thể tắt thành phần.",
+      67
+    ],
+    [
+      16,
+      "Pilot thiếu BN Dense và phiên bản cuối: validation loss trong TensorFlow.",
+      68
+    ]
+  ],
+  "tables": [
+    [
+      1,
+      "Các thành phần của bài nộp.",
+      2
+    ],
+    [
+      2,
+      "Đối chiếu yêu cầu Assignment 04.",
+      6
+    ],
+    [
+      3,
+      "Câu hỏi nghiên cứu và bằng chứng tương ứng.",
+      7
+    ],
+    [
+      4,
+      "Luồng xử lý và các đầu ra trung gian.",
+      8
+    ],
+    [
+      5,
+      "Điều kiện phần cứng và phần mềm.",
+      9
+    ],
+    [
+      6,
+      "Ký hiệu tensor được dùng nhất quán.",
+      11
+    ],
+    [
+      7,
+      "Convolution đầu tiên trên hai dạng ảnh.",
+      12
+    ],
+    [
+      8,
+      "Dữ liệu của ví dụ xuyên suốt.",
+      13
+    ],
+    [
+      9,
+      "Feature map tính bằng NumPy và đối chiếu vòng lặp trực tiếp.",
+      13
+    ],
+    [
+      10,
+      "Một số cấu hình hình học; chỉ dòng đầu dùng cho Conv thực nghiệm.",
+      14
+    ],
+    [
+      11,
+      "Vùng tiếp nhận của nhánh convolution trước Flatten.",
+      14
+    ],
+    [
+      12,
+      "Đầu ra ReLU, pooling và Flatten của ví dụ 5×5.",
+      15
+    ],
+    [
+      13,
+      "Chi phí của phần Dense trong mạng nhỏ.",
+      16
+    ],
+    [
+      14,
+      "Loss và gradient của ví dụ xuyên suốt.",
+      17
+    ],
+    [
+      15,
+      "Trạng thái cục bộ phục vụ lan truyền ngược.",
+      18
+    ],
+    [
+      16,
+      "Cấu hình tối ưu được giữ cố định.",
+      19
+    ],
+    [
+      17,
+      "Bối cảnh kiến trúc; các mạng tham khảo không được huấn luyện trong bài.",
+      21
+    ],
+    [
+      18,
+      "Quy mô trước khi tách validation.",
+      22
+    ],
+    [
+      19,
+      "Kết quả kiểm tra pixel, nhãn và ảnh trùng hoàn toàn.",
+      26
+    ],
+    [
+      20,
+      "Tập chia cố định được dùng cho mọi seed huấn luyện.",
+      27
+    ],
+    [
+      21,
+      "Khác biệt train, validation và test trong pipeline.",
+      28
+    ],
+    [
+      22,
+      "Vai trò khác nhau của ba dataset.",
+      29
+    ],
+    [
+      23,
+      "Kiến trúc baseline theo thứ tự forward.",
+      30
+    ],
+    [
+      24,
+      "Các thay đổi được kết hợp trong improved.",
+      31
+    ],
+    [
+      25,
+      "Shape NCHW xuyên suốt hai kiến trúc.",
+      32
+    ],
+    [
+      26,
+      "Tổng tham số trainable được kiểm tra trong chương trình.",
+      32
+    ],
+    [
+      27,
+      "Các quyết định thiết kế và giới hạn tương ứng.",
+      33
+    ],
+    [
+      28,
+      "Những khác biệt biểu diễn cần được chuyển đổi đúng.",
+      34
+    ],
+    [
+      29,
+      "Số lượt và phạm vi của bản mở rộng.",
+      35
+    ],
+    [
+      30,
+      "Định nghĩa chính xác của ba phép can thiệp.",
+      35
+    ],
+    [
+      31,
+      "Tham số, state và cache của các lớp NumPy.",
+      36
+    ],
+    [
+      32,
+      "Shape trong phép nhân ma trận convolution.",
+      37
+    ],
+    [
+      33,
+      "Gradient kernel 2×2 từ ví dụ xuyên suốt.",
+      38
+    ],
+    [
+      34,
+      "Các trường hợp biên của pooling.",
+      39
+    ],
+    [
+      35,
+      "Gradient ma trận Dense 4×3 trong ví dụ nhân tạo.",
+      40
+    ],
+    [
+      36,
+      "Liên hệ thuật toán thủ công với định nghĩa ablation.",
+      42
+    ],
+    [
+      37,
+      "Bước Adam đầu tiên với learning rate 0,001 trong ví dụ.",
+      43
+    ],
+    [
+      38,
+      "Các đầu ra nối quá trình học với báo cáo.",
+      44
+    ],
+    [
+      39,
+      "Phạm vi diễn giải của từng kiểm tra.",
+      45
+    ],
+    [
+      40,
+      "Ánh xạ trách nhiệm từ NumPy sang PyTorch.",
+      46
+    ],
+    [
+      41,
+      "Các thao tác cần có trong bước học.",
+      48
+    ],
+    [
+      42,
+      "Những dữ liệu cần phối hợp khi khôi phục một lượt.",
+      49
+    ],
+    [
+      43,
+      "Sáu kiểm tra dành riêng cho thiết kế ablation.",
+      50
+    ],
+    [
+      44,
+      "Đối chiếu PyTorch với NumPy trên batch kiểm tra CPU.",
+      51
+    ],
+    [
+      45,
+      "Ánh xạ kiến trúc sang Keras.",
+      52
+    ],
+    [
+      46,
+      "Bốn phép đối chiếu layout quan trọng.",
+      53
+    ],
+    [
+      47,
+      "Các điểm kiểm soát của GradientTape.",
+      54
+    ],
+    [
+      48,
+      "Hành vi TensorFlow theo chế độ và shape.",
+      55
+    ],
+    [
+      49,
+      "Các yếu tố để tái sử dụng checkpoint TensorFlow.",
+      56
+    ],
+    [
+      50,
+      "Đối chiếu TensorFlow với NumPy trên batch kiểm tra CPU.",
+      57
+    ],
+    [
+      51,
+      "Bài học kỹ thuật từ ba cách triển khai.",
+      57
+    ],
+    [
+      52,
+      "Phân nhóm kết quả; pilot không tham gia trung bình chính.",
+      58
+    ],
+    [
+      53,
+      "MNIST: trung bình ± SD của ba seed, test 10.000 ảnh mỗi lượt.",
+      59
+    ],
+    [
+      54,
+      "Phân hoạch 10.000 ảnh MNIST theo hai model PyTorch seed 42.",
+      60
+    ],
+    [
+      55,
+      "CIFAR-10: trung bình ± SD của ba seed, test 10.000 ảnh mỗi lượt.",
+      61
+    ],
+    [
+      56,
+      "Phân hoạch 10.000 ảnh CIFAR-10 theo hai model PyTorch seed 42.",
+      62
+    ],
+    [
+      57,
+      "CIFAR-100: trung bình ± SD của ba seed, test 10.000 ảnh mỗi lượt.",
+      63
+    ],
+    [
+      58,
+      "Phân hoạch 10.000 ảnh CIFAR-100 theo hai model PyTorch seed 42.",
+      64
+    ],
+    [
+      59,
+      "Bốn lớp recall thấp trong model minh họa CIFAR-100.",
+      64
+    ],
+    [
+      60,
+      "Accuracy improved trừ baseline theo từng cặp cùng seed.",
+      65
+    ],
+    [
+      61,
+      "PyTorch: trung bình ba seed; delta = biến thể trừ full.",
+      66
+    ],
+    [
+      62,
+      "PyTorch: trung bình ba seed; delta = biến thể trừ full.",
+      67
+    ],
+    [
+      63,
+      "Các giá trị train/validation của thử nghiệm ban đầu.",
+      68
+    ],
+    [
+      64,
+      "Thời gian train trung bình của ba seed; không phải benchmark cô lập.",
+      69
+    ],
+    [
+      65,
+      "Kiểm chứng dữ liệu kết quả, checkpoint và notebook trước đóng gói.",
+      69
+    ],
+    [
+      66,
+      "CIFAR-100: độ nhạy trung bình ba seed khi loại 10 ảnh test trùng pixel.",
+      70
+    ],
+    [
+      67,
+      "Tổng hợp câu trả lời theo bằng chứng thực nghiệm.",
+      71
+    ],
+    [
+      68,
+      "Các hướng chưa thực nghiệm và mục đích cụ thể.",
+      72
+    ],
+    [
+      69,
+      "Thứ tự đọc tám notebook trong bài nộp.",
+      76
+    ],
+    [
+      70,
+      "Cấu trúc thư mục phân biệt nhóm thí nghiệm.",
+      76
+    ],
+    [
+      71,
+      "54 lượt chính; accuracy của checkpoint chọn bằng validation loss.",
+      77
+    ],
+    [
+      72,
+      "18 lượt ablation; không đưa pilot vào bảng này.",
+      78
+    ]
+  ],
+  "code_listings": [
+    [
+      1,
+      "Kiểm tra một phép hoán vị layout và phép nghịch đảo.",
+      11
+    ],
+    [
+      2,
+      "Bản vòng lặp dễ kiểm tra của phép tổng tích cục bộ.",
+      13
+    ],
+    [
+      3,
+      "ReLU lưu mask ở forward và tái sử dụng ở backward.",
+      15
+    ],
+    [
+      4,
+      "Các điều kiện cấu trúc cần thỏa trước huấn luyện.",
+      26
+    ],
+    [
+      5,
+      "Tách validation có phân tầng; đoạn rút gọn từ src/data.py.",
+      27
+    ],
+    [
+      6,
+      "Tạo batch từ chỉ số; batch cuối không bị bỏ.",
+      28
+    ],
+    [
+      7,
+      "Mã giả mô tả luồng baseline; các lớp thực nằm trong notebook.",
+      30
+    ],
+    [
+      8,
+      "Giao diện và chiều duyệt của forward/backward, rút gọn từ source.",
+      36
+    ],
+    [
+      9,
+      "Những phép biến đổi chính của im2col; tên biến được viết rõ để giải thích.",
+      37
+    ],
+    [
+      10,
+      "Cộng dồn col2im bằng += và cắt phần padding.",
+      38
+    ],
+    [
+      11,
+      "Mask và shape là đủ cho hai lớp đơn giản.",
+      39
+    ],
+    [
+      12,
+      "Bước đưa gradient pooling về vị trí cực đại.",
+      39
+    ],
+    [
+      13,
+      "Công thức Dense và cross-entropy dùng trực tiếp trong NumPy.",
+      40
+    ],
+    [
+      14,
+      "Đạo hàm BN dùng trung bình theo đúng nhóm chuẩn hóa.",
+      41
+    ],
+    [
+      15,
+      "Gradient residual cộng hai nhánh sau mask ReLU.",
+      42
+    ],
+    [
+      16,
+      "Dropout dùng một mask cho forward và backward của cùng batch.",
+      42
+    ],
+    [
+      17,
+      "Adam cập nhật tại chỗ sau khi tăng bộ đếm step.",
+      43
+    ],
+    [
+      18,
+      "Mã giả nhấn mạnh vị trí validation và test trong vòng lặp.",
+      44
+    ],
+    [
+      19,
+      "Khôi phục trọng số sau hai phép nhiễu khi tính gradient số.",
+      45
+    ],
+    [
+      20,
+      "Cấu trúc baseline tương ứng bản NumPy.",
+      46
+    ],
+    [
+      21,
+      "Chuyển vị Dense và tính phương sai tổng thể theo kênh.",
+      47
+    ],
+    [
+      22,
+      "Các phép tính BN được viết bằng tensor để autograd xử lý.",
+      47
+    ],
+    [
+      23,
+      "Thứ tự thao tác cho một minibatch trong src/train.py.",
+      48
+    ],
+    [
+      24,
+      "Tách chế độ model, ghi đồ thị và trạng thái checkpoint.",
+      49
+    ],
+    [
+      25,
+      "Khởi tạo chung trước can thiệp và phép tắt riêng đường cộng.",
+      50
+    ],
+    [
+      26,
+      "Một số thiết lập của lượt huấn luyện PyTorch trong bài.",
+      51
+    ],
+    [
+      27,
+      "Nhánh residual giữ nguyên shape để dùng Add.",
+      52
+    ],
+    [
+      28,
+      "Chuyển layout của kernel và vector đặc trưng.",
+      53
+    ],
+    [
+      29,
+      "Bước huấn luyện tùy chỉnh tương ứng src/train.py.",
+      54
+    ],
+    [
+      30,
+      "Chế độ training điều khiển BN và dropout trong model.",
+      55
+    ],
+    [
+      31,
+      "Cấu hình bộ nhớ trước tạo model và khôi phục weights.",
+      56
+    ],
+    [
+      32,
+      "Lệnh tạo môi trường mới trong Anaconda Prompt; đổi đường dẫn dữ liệu nếu cần.",
+      75
+    ],
+    [
+      33,
+      "Các lệnh giao thức và tái tạo kết quả; runner bỏ qua lượt hoàn chỉnh khớp cấu hình.",
+      75
+    ],
+    [
+      34,
+      "Các lệnh kiểm tra; phiên bản chạy và đầu ra được lưu trong results.",
+      78
+    ]
+  ]
+}

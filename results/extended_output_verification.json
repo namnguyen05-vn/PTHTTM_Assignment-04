@@ -1,0 +1,290 @@
+[
+  {
+    "folder": "results/mnist_numpy_baseline",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/mnist_numpy_improved",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/mnist_pytorch_baseline",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/mnist_pytorch_improved",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/mnist_tensorflow_baseline",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/mnist_tensorflow_improved",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/cifar10_numpy_baseline",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/cifar10_numpy_improved",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/cifar10_pytorch_baseline",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/cifar10_pytorch_improved",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/cifar10_tensorflow_baseline",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/cifar10_tensorflow_improved",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/cifar100_numpy_baseline",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/cifar100_numpy_improved",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/cifar100_pytorch_baseline",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/cifar100_pytorch_improved",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/cifar100_tensorflow_baseline",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/cifar100_tensorflow_improved",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/multiseed/seed_7/mnist_numpy_baseline",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/multiseed/seed_7/mnist_numpy_improved",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/multiseed/seed_7/mnist_pytorch_baseline",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/multiseed/seed_7/mnist_pytorch_improved",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/multiseed/seed_7/mnist_tensorflow_baseline",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/multiseed/seed_7/mnist_tensorflow_improved",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/multiseed/seed_7/cifar10_numpy_baseline",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/multiseed/seed_7/cifar10_numpy_improved",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/multiseed/seed_7/cifar10_pytorch_baseline",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/multiseed/seed_7/cifar10_pytorch_improved",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/multiseed/seed_7/cifar10_tensorflow_baseline",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/multiseed/seed_7/cifar10_tensorflow_improved",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/multiseed/seed_7/cifar100_numpy_baseline",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/multiseed/seed_7/cifar100_numpy_improved",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/multiseed/seed_7/cifar100_pytorch_baseline",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/multiseed/seed_7/cifar100_pytorch_improved",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/multiseed/seed_7/cifar100_tensorflow_baseline",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/multiseed/seed_7/cifar100_tensorflow_improved",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/multiseed/seed_2026/mnist_numpy_baseline",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/multiseed/seed_2026/mnist_numpy_improved",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/multiseed/seed_2026/mnist_pytorch_baseline",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/multiseed/seed_2026/mnist_pytorch_improved",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/multiseed/seed_2026/mnist_tensorflow_baseline",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/multiseed/seed_2026/mnist_tensorflow_improved",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/multiseed/seed_2026/cifar10_numpy_baseline",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/multiseed/seed_2026/cifar10_numpy_improved",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/multiseed/seed_2026/cifar10_pytorch_baseline",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/multiseed/seed_2026/cifar10_pytorch_improved",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/multiseed/seed_2026/cifar10_tensorflow_baseline",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/multiseed/seed_2026/cifar10_tensorflow_improved",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/multiseed/seed_2026/cifar100_numpy_baseline",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/multiseed/seed_2026/cifar100_numpy_improved",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/multiseed/seed_2026/cifar100_pytorch_baseline",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/multiseed/seed_2026/cifar100_pytorch_improved",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/multiseed/seed_2026/cifar100_tensorflow_baseline",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/multiseed/seed_2026/cifar100_tensorflow_improved",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/ablation/seed_42/cifar10_pytorch_improved_no_bn",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/ablation/seed_7/cifar10_pytorch_improved_no_bn",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/ablation/seed_2026/cifar10_pytorch_improved_no_bn",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/ablation/seed_42/cifar10_pytorch_improved_no_skip",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/ablation/seed_7/cifar10_pytorch_improved_no_skip",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/ablation/seed_2026/cifar10_pytorch_improved_no_skip",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/ablation/seed_42/cifar10_pytorch_improved_no_dropout",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/ablation/seed_7/cifar10_pytorch_improved_no_dropout",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/ablation/seed_2026/cifar10_pytorch_improved_no_dropout",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/ablation/seed_42/cifar100_pytorch_improved_no_bn",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/ablation/seed_7/cifar100_pytorch_improved_no_bn",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/ablation/seed_2026/cifar100_pytorch_improved_no_bn",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/ablation/seed_42/cifar100_pytorch_improved_no_skip",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/ablation/seed_7/cifar100_pytorch_improved_no_skip",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/ablation/seed_2026/cifar100_pytorch_improved_no_skip",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/ablation/seed_42/cifar100_pytorch_improved_no_dropout",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/ablation/seed_7/cifar100_pytorch_improved_no_dropout",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  },
+  {
+    "folder": "results/ablation/seed_2026/cifar100_pytorch_improved_no_dropout",
+    "metrics_predictions_confusion_best_epoch_verified": true
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "backend": "numpy",
+    "variant": "baseline",
+    "official_mean": 0.28209999999999996,
+    "unseen_mean": 0.2820820820820821,
+    "unseen_std": 0.028929448474956123,
+    "excluded": 10,
+    "retained": 9990
+  },
+  {
+    "backend": "numpy",
+    "variant": "improved",
+    "official_mean": 0.3232,
+    "unseen_mean": 0.3231564898231565,
+    "unseen_std": 0.00159009043142395,
+    "excluded": 10,
+    "retained": 9990
+  },
+  {
+    "backend": "pytorch",
+    "variant": "baseline",
+    "official_mean": 0.2907666666666667,
+    "unseen_mean": 0.2906906906906907,
+    "unseen_std": 0.019032975228217206,
+    "excluded": 10,
+    "retained": 9990
+  },
+  {
+    "backend": "pytorch",
+    "variant": "improved",
+    "official_mean": 0.32406666666666667,
+    "unseen_mean": 0.3241241241241241,
+    "unseen_std": 0.003047715184712365,
+    "excluded": 10,
+    "retained": 9990
+  },
+  {
+    "backend": "tensorflow",
+    "variant": "baseline",
+    "official_mean": 0.28436666666666666,
+    "unseen_mean": 0.2843843843843844,
+    "unseen_std": 0.021992654911657566,
+    "excluded": 10,
+    "retained": 9990
+  },
+  {
+    "backend": "tensorflow",
+    "variant": "improved",
+    "official_mean": 0.32536666666666664,
+    "unseen_mean": 0.32539205872539206,
+    "unseen_std": 0.0012515848737745107,
+    "excluded": 10,
+    "retained": 9990
+  }
+]

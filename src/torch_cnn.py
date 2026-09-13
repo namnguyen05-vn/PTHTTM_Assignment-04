@@ -18,8 +18,10 @@ class PopulationBatchNorm(nn.Module):
 
 class Residual(nn.Module):
     def __init__(self,c):
-        super().__init__();self.conv=nn.Conv2d(c,c,3,padding=1);self.bn=PopulationBatchNorm(c)
-    def forward(self,x):return torch.relu(self.bn(self.conv(x))+x)
+        super().__init__();self.conv=nn.Conv2d(c,c,3,padding=1);self.bn=PopulationBatchNorm(c);self.use_skip=True
+    def forward(self,x):
+        branch=self.bn(self.conv(x))
+        return torch.relu(branch+x if self.use_skip else branch)
 
 class PopulationBatchNorm1D(PopulationBatchNorm):
     def forward(self,x):return super().forward(x[:,:,None,None])[:,:,0,0]
@@ -39,6 +41,20 @@ class TorchCNN(nn.Module):
         if improved:layers.append(nn.Dropout(0.25))
         layers.append(nn.Linear(64,classes));self.layers=nn.Sequential(*layers)
     def forward(self,x):return self.layers(x)
+    def ablate(self,component):
+        """Apply after shared initialization; preserve convolution and Dense weights."""
+        if component=='no_bn':
+            for i,layer in enumerate(self.layers):
+                if isinstance(layer,PopulationBatchNorm):self.layers[i]=nn.Identity()
+                elif isinstance(layer,Residual):layer.bn=nn.Identity()
+        elif component=='no_skip':
+            for layer in self.layers:
+                if isinstance(layer,Residual):layer.use_skip=False
+        elif component=='no_dropout':
+            for layer in self.layers:
+                if isinstance(layer,nn.Dropout):layer.p=0.0
+        elif component is not None:raise ValueError(component)
+        return self
     def load_numpy(self,state):
         with torch.no_grad():
             for i,layer in enumerate(self.layers):

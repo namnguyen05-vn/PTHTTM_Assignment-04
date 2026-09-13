@@ -1,0 +1,55 @@
+{
+  "dataset": "cifar10",
+  "backend": "pytorch",
+  "variant": "improved",
+  "epochs": 10,
+  "batch_size": 128,
+  "seed": 2026,
+  "learning_rate": 0.001,
+  "optimizer": "Adam",
+  "adam_beta1": 0.9,
+  "adam_beta2": 0.999,
+  "adam_epsilon": 1e-08,
+  "normalization": "uint8 / 255",
+  "train_samples": 45000,
+  "validation_samples": 5000,
+  "test_samples": 10000,
+  "device": "cuda",
+  "framework_version": "2.5.1+cu121",
+  "python": "3.10.20 | packaged by Anaconda, Inc. | (main, Jun 11 2026, 15:13:20) [MSC v.1942 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "parameter_count": 70170,
+  "selection": "minimum validation cross-entropy",
+  "augmentation": false,
+  "training_scope": "all predefined training samples, no subsampling",
+  "ablation": "no_dropout",
+  "split_seed": 42,
+  "cpu_thread_pools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "E:\\PTHTTM\\ASG_04_runtime\\env\\Lib\\site-packages\\numpy\\.libs\\libopenblas.FB5AE2TYXYH2IJRDKGDGQ3XBKLKTF43H.gfortran-win_amd64.dll",
+      "version": "0.3.20",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 4,
+      "prefix": "libiomp",
+      "filepath": "E:\\PTHTTM\\ASG_04_runtime\\env\\Lib\\site-packages\\torch\\lib\\libiomp5md.dll",
+      "version": null
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "libiomp",
+      "filepath": "E:\\PTHTTM\\ASG_04_runtime\\env\\Lib\\site-packages\\torch\\lib\\libiompstubs5md.dll",
+      "version": null
+    }
+  ]
+}

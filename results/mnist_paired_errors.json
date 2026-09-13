@@ -1,0 +1,20 @@
+{
+  "dataset": "mnist",
+  "reference": "PyTorch seed 42 fixed for all datasets",
+  "both_correct": 9821,
+  "corrected": 82,
+  "regressed": 42,
+  "both_wrong": 55,
+  "corrected_example_ids": [
+    18,
+    582,
+    629,
+    717
+  ],
+  "regressed_example_ids": [
+    62,
+    321,
+    844,
+    882
+  ]
+}

@@ -1,0 +1,531 @@
+{
+  "seeds": [
+    42,
+    7,
+    2026
+  ],
+  "fixed_split_seed": 42,
+  "main_runs": 54,
+  "ablation_runs": 18,
+  "reused_seed42_runs": 18,
+  "new_runs": 54,
+  "epochs": {
+    "mnist": 5,
+    "cifar10": 10,
+    "cifar100": 12
+  },
+  "selection": "minimum validation cross-entropy within fixed epoch budget",
+  "interpretation": "exploratory extension; original test results have already been observed",
+  "ablation_scope": "PyTorch on both CIFAR datasets; full improved is the paired reference",
+  "ablations": {
+    "no_bn": "Remove all four BN layers, retain all convolutions and Dense layers",
+    "no_skip": "Disable identity addition, retain Conv and BN in the branch",
+    "no_dropout": "Set dropout probability to zero"
+  },
+  "jobs": [
+    {
+      "dataset": "mnist",
+      "backend": "numpy",
+      "variant": "baseline",
+      "seed": 42,
+      "ablation": null
+    },
+    {
+      "dataset": "mnist",
+      "backend": "numpy",
+      "variant": "improved",
+      "seed": 42,
+      "ablation": null
+    },
+    {
+      "dataset": "mnist",
+      "backend": "pytorch",
+      "variant": "baseline",
+      "seed": 42,
+      "ablation": null
+    },
+    {
+      "dataset": "mnist",
+      "backend": "pytorch",
+      "variant": "improved",
+      "seed": 42,
+      "ablation": null
+    },
+    {
+      "dataset": "mnist",
+      "backend": "tensorflow",
+      "variant": "baseline",
+      "seed": 42,
+      "ablation": null
+    },
+    {
+      "dataset": "mnist",
+      "backend": "tensorflow",
+      "variant": "improved",
+      "seed": 42,
+      "ablation": null
+    },
+    {
+      "dataset": "cifar10",
+      "backend": "numpy",
+      "variant": "baseline",
+      "seed": 42,
+      "ablation": null
+    },
+    {
+      "dataset": "cifar10",
+      "backend": "numpy",
+      "variant": "improved",
+      "seed": 42,
+      "ablation": null
+    },
+    {
+      "dataset": "cifar10",
+      "backend": "pytorch",
+      "variant": "baseline",
+      "seed": 42,
+      "ablation": null
+    },
+    {
+      "dataset": "cifar10",
+      "backend": "pytorch",
+      "variant": "improved",
+      "seed": 42,
+      "ablation": null
+    },
+    {
+      "dataset": "cifar10",
+      "backend": "tensorflow",
+      "variant": "baseline",
+      "seed": 42,
+      "ablation": null
+    },
+    {
+      "dataset": "cifar10",
+      "backend": "tensorflow",
+      "variant": "improved",
+      "seed": 42,
+      "ablation": null
+    },
+    {
+      "dataset": "cifar100",
+      "backend": "numpy",
+      "variant": "baseline",
+      "seed": 42,
+      "ablation": null
+    },
+    {
+      "dataset": "cifar100",
+      "backend": "numpy",
+      "variant": "improved",
+      "seed": 42,
+      "ablation": null
+    },
+    {
+      "dataset": "cifar100",
+      "backend": "pytorch",
+      "variant": "baseline",
+      "seed": 42,
+      "ablation": null
+    },
+    {
+      "dataset": "cifar100",
+      "backend": "pytorch",
+      "variant": "improved",
+      "seed": 42,
+      "ablation": null
+    },
+    {
+      "dataset": "cifar100",
+      "backend": "tensorflow",
+      "variant": "baseline",
+      "seed": 42,
+      "ablation": null
+    },
+    {
+      "dataset": "cifar100",
+      "backend": "tensorflow",
+      "variant": "improved",
+      "seed": 42,
+      "ablation": null
+    },
+    {
+      "dataset": "mnist",
+      "backend": "numpy",
+      "variant": "baseline",
+      "seed": 7,
+      "ablation": null
+    },
+    {
+      "dataset": "mnist",
+      "backend": "numpy",
+      "variant": "improved",
+      "seed": 7,
+      "ablation": null
+    },
+    {
+      "dataset": "mnist",
+      "backend": "pytorch",
+      "variant": "baseline",
+      "seed": 7,
+      "ablation": null
+    },
+    {
+      "dataset": "mnist",
+      "backend": "pytorch",
+      "variant": "improved",
+      "seed": 7,
+      "ablation": null
+    },
+    {
+      "dataset": "mnist",
+      "backend": "tensorflow",
+      "variant": "baseline",
+      "seed": 7,
+      "ablation": null
+    },
+    {
+      "dataset": "mnist",
+      "backend": "tensorflow",
+      "variant": "improved",
+      "seed": 7,
+      "ablation": null
+    },
+    {
+      "dataset": "cifar10",
+      "backend": "numpy",
+      "variant": "baseline",
+      "seed": 7,
+      "ablation": null
+    },
+    {
+      "dataset": "cifar10",
+      "backend": "numpy",
+      "variant": "improved",
+      "seed": 7,
+      "ablation": null
+    },
+    {
+      "dataset": "cifar10",
+      "backend": "pytorch",
+      "variant": "baseline",
+      "seed": 7,
+      "ablation": null
+    },
+    {
+      "dataset": "cifar10",
+      "backend": "pytorch",
+      "variant": "improved",
+      "seed": 7,
+      "ablation": null
+    },
+    {
+      "dataset": "cifar10",
+      "backend": "tensorflow",
+      "variant": "baseline",
+      "seed": 7,
+      "ablation": null
+    },
+    {
+      "dataset": "cifar10",
+      "backend": "tensorflow",
+      "variant": "improved",
+      "seed": 7,
+      "ablation": null
+    },
+    {
+      "dataset": "cifar100",
+      "backend": "numpy",
+      "variant": "baseline",
+      "seed": 7,
+      "ablation": null
+    },
+    {
+      "dataset": "cifar100",
+      "backend": "numpy",
+      "variant": "improved",
+      "seed": 7,
+      "ablation": null
+    },
+    {
+      "dataset": "cifar100",
+      "backend": "pytorch",
+      "variant": "baseline",
+      "seed": 7,
+      "ablation": null
+    },
+    {
+      "dataset": "cifar100",
+      "backend": "pytorch",
+      "variant": "improved",
+      "seed": 7,
+      "ablation": null
+    },
+    {
+      "dataset": "cifar100",
+      "backend": "tensorflow",
+      "variant": "baseline",
+      "seed": 7,
+      "ablation": null
+    },
+    {
+      "dataset": "cifar100",
+      "backend": "tensorflow",
+      "variant": "improved",
+      "seed": 7,
+      "ablation": null
+    },
+    {
+      "dataset": "mnist",
+      "backend": "numpy",
+      "variant": "baseline",
+      "seed": 2026,
+      "ablation": null
+    },
+    {
+      "dataset": "mnist",
+      "backend": "numpy",
+      "variant": "improved",
+      "seed": 2026,
+      "ablation": null
+    },
+    {
+      "dataset": "mnist",
+      "backend": "pytorch",
+      "variant": "baseline",
+      "seed": 2026,
+      "ablation": null
+    },
+    {
+      "dataset": "mnist",
+      "backend": "pytorch",
+      "variant": "improved",
+      "seed": 2026,
+      "ablation": null
+    },
+    {
+      "dataset": "mnist",
+      "backend": "tensorflow",
+      "variant": "baseline",
+      "seed": 2026,
+      "ablation": null
+    },
+    {
+      "dataset": "mnist",
+      "backend": "tensorflow",
+      "variant": "improved",
+      "seed": 2026,
+      "ablation": null
+    },
+    {
+      "dataset": "cifar10",
+      "backend": "numpy",
+      "variant": "baseline",
+      "seed": 2026,
+      "ablation": null
+    },
+    {
+      "dataset": "cifar10",
+      "backend": "numpy",
+      "variant": "improved",
+      "seed": 2026,
+      "ablation": null
+    },
+    {
+      "dataset": "cifar10",
+      "backend": "pytorch",
+      "variant": "baseline",
+      "seed": 2026,
+      "ablation": null
+    },
+    {
+      "dataset": "cifar10",
+      "backend": "pytorch",
+      "variant": "improved",
+      "seed": 2026,
+      "ablation": null
+    },
+    {
+      "dataset": "cifar10",
+      "backend": "tensorflow",
+      "variant": "baseline",
+      "seed": 2026,
+      "ablation": null
+    },
+    {
+      "dataset": "cifar10",
+      "backend": "tensorflow",
+      "variant": "improved",
+      "seed": 2026,
+      "ablation": null
+    },
+    {
+      "dataset": "cifar100",
+      "backend": "numpy",
+      "variant": "baseline",
+      "seed": 2026,
+      "ablation": null
+    },
+    {
+      "dataset": "cifar100",
+      "backend": "numpy",
+      "variant": "improved",
+      "seed": 2026,
+      "ablation": null
+    },
+    {
+      "dataset": "cifar100",
+      "backend": "pytorch",
+      "variant": "baseline",
+      "seed": 2026,
+      "ablation": null
+    },
+    {
+      "dataset": "cifar100",
+      "backend": "pytorch",
+      "variant": "improved",
+      "seed": 2026,
+      "ablation": null
+    },
+    {
+      "dataset": "cifar100",
+      "backend": "tensorflow",
+      "variant": "baseline",
+      "seed": 2026,
+      "ablation": null
+    },
+    {
+      "dataset": "cifar100",
+      "backend": "tensorflow",
+      "variant": "improved",
+      "seed": 2026,
+      "ablation": null
+    },
+    {
+      "dataset": "cifar10",
+      "backend": "pytorch",
+      "variant": "improved",
+      "seed": 42,
+      "ablation": "no_bn"
+    },
+    {
+      "dataset": "cifar10",
+      "backend": "pytorch",
+      "variant": "improved",
+      "seed": 7,
+      "ablation": "no_bn"
+    },
+    {
+      "dataset": "cifar10",
+      "backend": "pytorch",
+      "variant": "improved",
+      "seed": 2026,
+      "ablation": "no_bn"
+    },
+    {
+      "dataset": "cifar10",
+      "backend": "pytorch",
+      "variant": "improved",
+      "seed": 42,
+      "ablation": "no_skip"
+    },
+    {
+      "dataset": "cifar10",
+      "backend": "pytorch",
+      "variant": "improved",
+      "seed": 7,
+      "ablation": "no_skip"
+    },
+    {
+      "dataset": "cifar10",
+      "backend": "pytorch",
+      "variant": "improved",
+      "seed": 2026,
+      "ablation": "no_skip"
+    },
+    {
+      "dataset": "cifar10",
+      "backend": "pytorch",
+      "variant": "improved",
+      "seed": 42,
+      "ablation": "no_dropout"
+    },
+    {
+      "dataset": "cifar10",
+      "backend": "pytorch",
+      "variant": "improved",
+      "seed": 7,
+      "ablation": "no_dropout"
+    },
+    {
+      "dataset": "cifar10",
+      "backend": "pytorch",
+      "variant": "improved",
+      "seed": 2026,
+      "ablation": "no_dropout"
+    },
+    {
+      "dataset": "cifar100",
+      "backend": "pytorch",
+      "variant": "improved",
+      "seed": 42,
+      "ablation": "no_bn"
+    },
+    {
+      "dataset": "cifar100",
+      "backend": "pytorch",
+      "variant": "improved",
+      "seed": 7,
+      "ablation": "no_bn"
+    },
+    {
+      "dataset": "cifar100",
+      "backend": "pytorch",
+      "variant": "improved",
+      "seed": 2026,
+      "ablation": "no_bn"
+    },
+    {
+      "dataset": "cifar100",
+      "backend": "pytorch",
+      "variant": "improved",
+      "seed": 42,
+      "ablation": "no_skip"
+    },
+    {
+      "dataset": "cifar100",
+      "backend": "pytorch",
+      "variant": "improved",
+      "seed": 7,
+      "ablation": "no_skip"
+    },
+    {
+      "dataset": "cifar100",
+      "backend": "pytorch",
+      "variant": "improved",
+      "seed": 2026,
+      "ablation": "no_skip"
+    },
+    {
+      "dataset": "cifar100",
+      "backend": "pytorch",
+      "variant": "improved",
+      "seed": 42,
+      "ablation": "no_dropout"
+    },
+    {
+      "dataset": "cifar100",
+      "backend": "pytorch",
+      "variant": "improved",
+      "seed": 7,
+      "ablation": "no_dropout"
+    },
+    {
+      "dataset": "cifar100",
+      "backend": "pytorch",
+      "variant": "improved",
+      "seed": 2026,
+      "ablation": "no_dropout"
+    }
+  ]
+}

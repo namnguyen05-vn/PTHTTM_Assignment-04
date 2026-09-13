@@ -28,5 +28,15 @@
     "notebook": "05_Compare_Results.ipynb",
     "executed_code_cells": 6,
     "errors": 0
+  },
+  {
+    "notebook": "06_Multiple_Seeds_and_Ablation.ipynb",
+    "executed_code_cells": 10,
+    "errors": 0
+  },
+  {
+    "notebook": "07_Worked_CNN_Example.ipynb",
+    "executed_code_cells": 6,
+    "errors": 0
   }
 ]
