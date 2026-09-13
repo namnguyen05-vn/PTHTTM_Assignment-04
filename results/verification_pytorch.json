@@ -1,0 +1,74 @@
+[
+  {
+    "backend": "pytorch",
+    "dataset": "mnist",
+    "variant": "baseline",
+    "passed": true,
+    "max_absolute_errors": {
+      "train_logits": 1.1920928955078125e-06,
+      "input_gradient": 2.60770320892334e-08,
+      "conv1_gradient": 3.501772880554199e-07,
+      "eval_logits": 1.1920928955078125e-06
+    }
+  },
+  {
+    "backend": "pytorch",
+    "dataset": "mnist",
+    "variant": "improved",
+    "passed": true,
+    "max_absolute_errors": {
+      "train_logits": 5.0067901611328125e-06,
+      "input_gradient": 1.1380761861801147e-06,
+      "conv1_gradient": 8.64267349243164e-06,
+      "eval_logits": 1.7285346984863281e-06
+    }
+  },
+  {
+    "backend": "pytorch",
+    "dataset": "cifar10",
+    "variant": "baseline",
+    "passed": true,
+    "max_absolute_errors": {
+      "train_logits": 1.4901161193847656e-06,
+      "input_gradient": 2.9802322387695312e-08,
+      "conv1_gradient": 6.556510925292969e-07,
+      "eval_logits": 1.4901161193847656e-06
+    }
+  },
+  {
+    "backend": "pytorch",
+    "dataset": "cifar10",
+    "variant": "improved",
+    "passed": true,
+    "max_absolute_errors": {
+      "train_logits": 4.112720489501953e-06,
+      "input_gradient": 2.9616057872772217e-07,
+      "conv1_gradient": 4.9173831939697266e-06,
+      "eval_logits": 3.0994415283203125e-06
+    }
+  },
+  {
+    "backend": "pytorch",
+    "dataset": "cifar100",
+    "variant": "baseline",
+    "passed": true,
+    "max_absolute_errors": {
+      "train_logits": 3.5762786865234375e-06,
+      "input_gradient": 2.9802322387695312e-08,
+      "conv1_gradient": 5.066394805908203e-07,
+      "eval_logits": 3.5762786865234375e-06
+    }
+  },
+  {
+    "backend": "pytorch",
+    "dataset": "cifar100",
+    "variant": "improved",
+    "passed": true,
+    "max_absolute_errors": {
+      "train_logits": 4.887580871582031e-06,
+      "input_gradient": 6.530899554491043e-07,
+      "conv1_gradient": 8.106231689453125e-06,
+      "eval_logits": 4.291534423828125e-06
+    }
+  }
+]

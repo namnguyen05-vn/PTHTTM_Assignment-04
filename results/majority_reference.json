@@ -1,0 +1,17 @@
+[
+  {
+    "dataset": "mnist",
+    "majority_class": 1,
+    "test_accuracy": 0.1135
+  },
+  {
+    "dataset": "cifar10",
+    "majority_class": 0,
+    "test_accuracy": 0.1
+  },
+  {
+    "dataset": "cifar100",
+    "majority_class": 0,
+    "test_accuracy": 0.01
+  }
+]

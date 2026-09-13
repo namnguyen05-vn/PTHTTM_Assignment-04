@@ -1,0 +1,22 @@
+{
+  "accuracy": 0.9903,
+  "macro_precision": 0.9902713457818695,
+  "macro_recall": 0.9901863971467675,
+  "macro_f1": 0.9902081705959537,
+  "test_loss": 0.030866757035255432,
+  "top5_accuracy": 0.9999,
+  "dataset": "mnist",
+  "backend": "pytorch",
+  "variant": "improved",
+  "parameter_count": 54666,
+  "train_samples": 54001,
+  "validation_samples": 5999,
+  "test_samples": 10000,
+  "device": "cuda",
+  "epochs": 5,
+  "best_epoch": 5,
+  "best_val_loss": 0.04201643168926239,
+  "train_seconds": 43.840935100000024,
+  "validation_seconds": 1.0648900000003323,
+  "test_seconds": 0.4409392999998545
+}

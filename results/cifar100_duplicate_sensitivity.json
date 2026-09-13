@@ -1,0 +1,50 @@
+[
+  {
+    "backend": "numpy",
+    "variant": "baseline",
+    "official_accuracy": 0.2823,
+    "unseen_pixel_accuracy": 0.2822822822822823,
+    "retained_test_images": 9990,
+    "excluded_test_images": 10
+  },
+  {
+    "backend": "numpy",
+    "variant": "improved",
+    "official_accuracy": 0.3242,
+    "unseen_pixel_accuracy": 0.324024024024024,
+    "retained_test_images": 9990,
+    "excluded_test_images": 10
+  },
+  {
+    "backend": "pytorch",
+    "variant": "baseline",
+    "official_accuracy": 0.2884,
+    "unseen_pixel_accuracy": 0.2882882882882883,
+    "retained_test_images": 9990,
+    "excluded_test_images": 10
+  },
+  {
+    "backend": "pytorch",
+    "variant": "improved",
+    "official_accuracy": 0.3215,
+    "unseen_pixel_accuracy": 0.32142142142142144,
+    "retained_test_images": 9990,
+    "excluded_test_images": 10
+  },
+  {
+    "backend": "tensorflow",
+    "variant": "baseline",
+    "official_accuracy": 0.2854,
+    "unseen_pixel_accuracy": 0.28548548548548547,
+    "retained_test_images": 9990,
+    "excluded_test_images": 10
+  },
+  {
+    "backend": "tensorflow",
+    "variant": "improved",
+    "official_accuracy": 0.3254,
+    "unseen_pixel_accuracy": 0.3254254254254254,
+    "retained_test_images": 9990,
+    "excluded_test_images": 10
+  }
+]

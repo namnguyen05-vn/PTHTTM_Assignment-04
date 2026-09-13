@@ -1,0 +1,110 @@
+[
+  {
+    "experiment": "mnist_numpy_baseline",
+    "metrics_recomputed": true,
+    "confusion_verified": true,
+    "best_epoch_verified": true
+  },
+  {
+    "experiment": "mnist_numpy_improved",
+    "metrics_recomputed": true,
+    "confusion_verified": true,
+    "best_epoch_verified": true
+  },
+  {
+    "experiment": "mnist_pytorch_baseline",
+    "metrics_recomputed": true,
+    "confusion_verified": true,
+    "best_epoch_verified": true
+  },
+  {
+    "experiment": "mnist_pytorch_improved",
+    "metrics_recomputed": true,
+    "confusion_verified": true,
+    "best_epoch_verified": true
+  },
+  {
+    "experiment": "mnist_tensorflow_baseline",
+    "metrics_recomputed": true,
+    "confusion_verified": true,
+    "best_epoch_verified": true
+  },
+  {
+    "experiment": "mnist_tensorflow_improved",
+    "metrics_recomputed": true,
+    "confusion_verified": true,
+    "best_epoch_verified": true
+  },
+  {
+    "experiment": "cifar10_numpy_baseline",
+    "metrics_recomputed": true,
+    "confusion_verified": true,
+    "best_epoch_verified": true
+  },
+  {
+    "experiment": "cifar10_numpy_improved",
+    "metrics_recomputed": true,
+    "confusion_verified": true,
+    "best_epoch_verified": true
+  },
+  {
+    "experiment": "cifar10_pytorch_baseline",
+    "metrics_recomputed": true,
+    "confusion_verified": true,
+    "best_epoch_verified": true
+  },
+  {
+    "experiment": "cifar10_pytorch_improved",
+    "metrics_recomputed": true,
+    "confusion_verified": true,
+    "best_epoch_verified": true
+  },
+  {
+    "experiment": "cifar10_tensorflow_baseline",
+    "metrics_recomputed": true,
+    "confusion_verified": true,
+    "best_epoch_verified": true
+  },
+  {
+    "experiment": "cifar10_tensorflow_improved",
+    "metrics_recomputed": true,
+    "confusion_verified": true,
+    "best_epoch_verified": true
+  },
+  {
+    "experiment": "cifar100_numpy_baseline",
+    "metrics_recomputed": true,
+    "confusion_verified": true,
+    "best_epoch_verified": true
+  },
+  {
+    "experiment": "cifar100_numpy_improved",
+    "metrics_recomputed": true,
+    "confusion_verified": true,
+    "best_epoch_verified": true
+  },
+  {
+    "experiment": "cifar100_pytorch_baseline",
+    "metrics_recomputed": true,
+    "confusion_verified": true,
+    "best_epoch_verified": true
+  },
+  {
+    "experiment": "cifar100_pytorch_improved",
+    "metrics_recomputed": true,
+    "confusion_verified": true,
+    "best_epoch_verified": true
+  },
+  {
+    "experiment": "cifar100_tensorflow_baseline",
+    "metrics_recomputed": true,
+    "confusion_verified": true,
+    "best_epoch_verified": true
+  },
+  {
+    "experiment": "cifar100_tensorflow_improved",
+    "metrics_recomputed": true,
+    "confusion_verified": true,
+    "best_epoch_verified": true
+  }
+]

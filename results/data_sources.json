@@ -1,0 +1,44 @@
+[
+  {
+    "dataset": "mnist",
+    "kaggle_slug": "oddrationale/mnist-in-csv",
+    "url": "https://www.kaggle.com/datasets/oddrationale/mnist-in-csv",
+    "zip_sha256": "f61368472600334d2f10d049df95f53d001bb0625eaa98de46b2bc5bbee2d636",
+    "bytes": 15970596,
+    "files": [
+      "mnist_test.csv",
+      "mnist_train.csv"
+    ]
+  },
+  {
+    "dataset": "cifar10",
+    "kaggle_slug": "pankrzysiu/cifar10-python",
+    "url": "https://www.kaggle.com/datasets/pankrzysiu/cifar10-python",
+    "zip_sha256": "4d382822fadbfb3101c16cdf6995bd9649b6f60375fa9172a129fff3d08853f8",
+    "bytes": 340613496,
+    "files": [
+      "cifar-10-batches-py/batches.meta",
+      "cifar-10-batches-py/data_batch_1",
+      "cifar-10-batches-py/data_batch_2",
+      "cifar-10-batches-py/data_batch_3",
+      "cifar-10-batches-py/data_batch_4",
+      "cifar-10-batches-py/data_batch_5",
+      "cifar-10-batches-py/readme.html",
+      "cifar-10-batches-py/test_batch",
+      "cifar-10-python.tar.gz"
+    ]
+  },
+  {
+    "dataset": "cifar100",
+    "kaggle_slug": "fedesoriano/cifar100",
+    "url": "https://www.kaggle.com/datasets/fedesoriano/cifar100",
+    "zip_sha256": "993e5b43676e0fab01566b26da97a5c4ce66c41269cbaa5dc11a3152123f1ea9",
+    "bytes": 168517809,
+    "files": [
+      "file.txt",
+      "meta",
+      "test",
+      "train"
+    ]
+  }
+]

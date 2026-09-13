@@ -1,0 +1,58 @@
+{
+  "dataset": "cifar100",
+  "representative_backend": "numpy",
+  "representative_variant": "improved",
+  "selection": "lowest best validation loss among six runs",
+  "worst_pairs": [
+    {
+      "true": "ray",
+      "predicted": "shark",
+      "count": 25
+    },
+    {
+      "true": "maple_tree",
+      "predicted": "oak_tree",
+      "count": 23
+    },
+    {
+      "true": "whale",
+      "predicted": "dolphin",
+      "count": 20
+    },
+    {
+      "true": "plate",
+      "predicted": "clock",
+      "count": 19
+    },
+    {
+      "true": "willow_tree",
+      "predicted": "oak_tree",
+      "count": 18
+    },
+    {
+      "true": "sweet_pepper",
+      "predicted": "orange",
+      "count": 17
+    },
+    {
+      "true": "girl",
+      "predicted": "man",
+      "count": 17
+    },
+    {
+      "true": "dolphin",
+      "predicted": "shark",
+      "count": 17
+    },
+    {
+      "true": "shark",
+      "predicted": "dolphin",
+      "count": 16
+    },
+    {
+      "true": "sea",
+      "predicted": "plain",
+      "count": 16
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "dataset": "mnist",
+  "representative_backend": "pytorch",
+  "representative_variant": "improved",
+  "selection": "lowest best validation loss among six runs",
+  "worst_pairs": [
+    {
+      "true": "9",
+      "predicted": "4",
+      "count": 8
+    },
+    {
+      "true": "4",
+      "predicted": "9",
+      "count": 7
+    },
+    {
+      "true": "9",
+      "predicted": "7",
+      "count": 6
+    },
+    {
+      "true": "2",
+      "predicted": "7",
+      "count": 6
+    },
+    {
+      "true": "9",
+      "predicted": "0",
+      "count": 5
+    },
+    {
+      "true": "9",
+      "predicted": "5",
+      "count": 5
+    },
+    {
+      "true": "6",
+      "predicted": "0",
+      "count": 5
+    },
+    {
+      "true": "6",
+      "predicted": "1",
+      "count": 4
+    },
+    {
+      "true": "7",
+      "predicted": "2",
+      "count": 4
+    },
+    {
+      "true": "8",
+      "predicted": "5",
+      "count": 3
+    }
+  ]
+}

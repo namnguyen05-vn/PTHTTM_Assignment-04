@@ -1,0 +1,22 @@
+{
+  "accuracy": 0.1139,
+  "macro_precision": 0.08793246799094488,
+  "macro_recall": 0.1139,
+  "macro_f1": 0.0788052450509207,
+  "test_loss": 3.744148015975952,
+  "top5_accuracy": 0.3604,
+  "dataset": "cifar100",
+  "backend": "tensorflow",
+  "variant": "improved",
+  "parameter_count": 75892,
+  "train_samples": 45000,
+  "validation_samples": 5000,
+  "test_samples": 10000,
+  "device": "GPU",
+  "epochs": 12,
+  "best_epoch": 12,
+  "best_val_loss": 3.744223117828369,
+  "train_seconds": 45.41432370000007,
+  "validation_seconds": 2.7045918000001166,
+  "test_seconds": 0.42720040000006065
+}

@@ -1,0 +1,58 @@
+{
+  "dataset": "cifar10",
+  "representative_backend": "numpy",
+  "representative_variant": "improved",
+  "selection": "lowest best validation loss among six runs",
+  "worst_pairs": [
+    {
+      "true": "cat",
+      "predicted": "dog",
+      "count": 193
+    },
+    {
+      "true": "dog",
+      "predicted": "cat",
+      "count": 154
+    },
+    {
+      "true": "deer",
+      "predicted": "bird",
+      "count": 117
+    },
+    {
+      "true": "ship",
+      "predicted": "airplane",
+      "count": 114
+    },
+    {
+      "true": "truck",
+      "predicted": "automobile",
+      "count": 113
+    },
+    {
+      "true": "automobile",
+      "predicted": "truck",
+      "count": 95
+    },
+    {
+      "true": "deer",
+      "predicted": "frog",
+      "count": 92
+    },
+    {
+      "true": "cat",
+      "predicted": "bird",
+      "count": 89
+    },
+    {
+      "true": "cat",
+      "predicted": "frog",
+      "count": 89
+    },
+    {
+      "true": "bird",
+      "predicted": "deer",
+      "count": 88
+    }
+  ]
+}

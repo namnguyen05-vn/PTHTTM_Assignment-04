@@ -1,0 +1,22 @@
+{
+  "accuracy": 0.9868,
+  "macro_precision": 0.9867331769493877,
+  "macro_recall": 0.9868161785320536,
+  "macro_f1": 0.9867304529712912,
+  "test_loss": 0.04021848738193512,
+  "top5_accuracy": 0.9999,
+  "dataset": "mnist",
+  "backend": "numpy",
+  "variant": "improved",
+  "parameter_count": 54538,
+  "train_samples": 54001,
+  "validation_samples": 5999,
+  "test_samples": 10000,
+  "device": "CPU",
+  "epochs": 5,
+  "best_epoch": 4,
+  "best_val_loss": 0.05584268644452095,
+  "train_seconds": 403.51990550000005,
+  "validation_seconds": 16.553479600000117,
+  "test_seconds": 4.472957299999962
+}

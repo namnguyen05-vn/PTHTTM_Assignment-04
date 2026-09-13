@@ -101,18 +101,34 @@ def analyze(require_complete=True):
         ax.set(xlabel='Predicted class',ylabel='True class',title=f'{name.upper()} - {chosen.backend} / {chosen.variant}')
         fig.colorbar(im,ax=ax,label='Fraction within true class');fig.tight_layout();save(fig,f'{name}_confusion.png')
         preds=pd.read_csv(folder/'predictions.csv');errors=preds[preds.true_label!=preds.predicted_label].sort_values('confidence',ascending=False)
-        fig,axes=plt.subplots(2,5,figsize=(10,4.6))
+        fig,axes=plt.subplots(2,5,figsize=(10,5.3))
         for ax,(_,row) in zip(axes.flat,errors.head(10).iterrows()):
             im=d['x_test'][int(row.test_id)].transpose(1,2,0)
             ax.imshow(im[:,:,0] if cfg['channels']==1 else im,cmap='gray' if cfg['channels']==1 else None,vmin=0,vmax=255)
             ax.set_title(f'T: {names[int(row.true_label)]}\nP: {names[int(row.predicted_label)]} ({row.confidence:.2f})',fontsize=8);ax.axis('off')
-        fig.suptitle(name.upper()+' - ten most confident wrong predictions');fig.tight_layout();save(fig,f'{name}_errors.png')
+        fig.suptitle(name.upper()+' - ten most confident wrong predictions',y=.98)
+        fig.subplots_adjust(left=.02,right=.99,bottom=.02,top=.85,wspace=.18,hspace=.48)
+        save(fig,f'{name}_errors.png')
         pairs=cm.copy();np.fill_diagonal(pairs,0);top=np.dstack(np.unravel_index(np.argsort(pairs.ravel())[-10:][::-1],pairs.shape))[0]
         detail=dict(dataset=name,representative_backend=chosen.backend,representative_variant=chosen.variant,selection='lowest best validation loss among six runs',worst_pairs=[dict(true=str(names[i]),predicted=str(names[j]),count=int(cm[i,j])) for i,j in top])
         (ROOT/'results'/f'{name}_error_analysis.json').write_text(json.dumps(detail,indent=2))
         recalls=np.diag(cm)/cm.sum(1);order=np.argsort(recalls)[:min(20,len(names))]
         fig,ax=plt.subplots(figsize=(8,4));ax.barh(np.arange(len(order)),100*recalls[order],color='#246a98');ax.set_yticks(range(len(order)),names[order]);ax.set(xlabel='Recall (%)',xlim=(0,100),title=name.upper()+' - lowest class recalls');ax.invert_yaxis();fig.tight_layout();save(fig,f'{name}_recall.png')
     if len(df)==18:
+        readme=ROOT/'README.md'
+        if readme.exists():
+            content=readme.read_text(encoding='utf-8')
+            start='<!-- RESULTS_START -->';end='<!-- RESULTS_END -->'
+            lines=['**Accuracy test (%): baseline → improved.** Mỗi kết quả là một lượt seed 42.','', '| Dataset | NumPy | PyTorch | TensorFlow |','|---|---:|---:|---:|']
+            for name in DATASETS:
+                values=[]
+                for b in COLORS:
+                    pair=df[(df.dataset==name)&(df.backend==b)].set_index('variant').accuracy
+                    values.append(f'{100*pair.baseline:.2f} → {100*pair.improved:.2f}')
+                lines.append('| '+name.upper()+' | '+' | '.join(values)+' |')
+            if start in content and end in content:
+                content=content.split(start)[0]+start+'\n'+'\n'.join(lines)+'\n'+end+content.split(end)[1]
+                readme.write_text(content,encoding='utf-8')
         fig,axes=plt.subplots(1,3,figsize=(11,3.5))
         for ax,name in zip(axes,DATASETS):
             for j,v in enumerate(['baseline','improved']):

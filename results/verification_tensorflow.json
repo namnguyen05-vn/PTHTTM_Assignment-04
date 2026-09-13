@@ -1,0 +1,74 @@
+[
+  {
+    "backend": "tensorflow",
+    "dataset": "mnist",
+    "variant": "baseline",
+    "passed": true,
+    "max_absolute_errors": {
+      "train_logits": 1.5497207641601562e-06,
+      "input_gradient": 3.818422555923462e-08,
+      "conv1_gradient": 2.5331974029541016e-07,
+      "eval_logits": 1.5497207641601562e-06
+    }
+  },
+  {
+    "backend": "tensorflow",
+    "dataset": "mnist",
+    "variant": "improved",
+    "passed": true,
+    "max_absolute_errors": {
+      "train_logits": 3.337860107421875e-06,
+      "input_gradient": 6.556510925292969e-07,
+      "conv1_gradient": 4.76837158203125e-06,
+      "eval_logits": 2.384185791015625e-06
+    }
+  },
+  {
+    "backend": "tensorflow",
+    "dataset": "cifar10",
+    "variant": "baseline",
+    "passed": true,
+    "max_absolute_errors": {
+      "train_logits": 2.4437904357910156e-06,
+      "input_gradient": 2.2351741790771484e-08,
+      "conv1_gradient": 4.172325134277344e-07,
+      "eval_logits": 2.4437904357910156e-06
+    }
+  },
+  {
+    "backend": "tensorflow",
+    "dataset": "cifar10",
+    "variant": "improved",
+    "passed": true,
+    "max_absolute_errors": {
+      "train_logits": 3.6954879760742188e-06,
+      "input_gradient": 2.0675361156463623e-07,
+      "conv1_gradient": 3.546476364135742e-06,
+      "eval_logits": 3.2335519790649414e-06
+    }
+  },
+  {
+    "backend": "tensorflow",
+    "dataset": "cifar100",
+    "variant": "baseline",
+    "passed": true,
+    "max_absolute_errors": {
+      "train_logits": 3.0994415283203125e-06,
+      "input_gradient": 2.60770320892334e-08,
+      "conv1_gradient": 4.917383193969727e-07,
+      "eval_logits": 3.0994415283203125e-06
+    }
+  },
+  {
+    "backend": "tensorflow",
+    "dataset": "cifar100",
+    "variant": "improved",
+    "passed": true,
+    "max_absolute_errors": {
+      "train_logits": 5.0067901611328125e-06,
+      "input_gradient": 1.3485550880432129e-06,
+      "conv1_gradient": 1.5854835510253906e-05,
+      "eval_logits": 4.0531158447265625e-06
+    }
+  }
+]

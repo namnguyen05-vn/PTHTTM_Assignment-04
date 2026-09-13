@@ -19,7 +19,7 @@ def classification_metrics(y,logits,k):
     if k>=5:result['top5_accuracy']=float(np.any(np.argsort(logits,axis=1)[:,-5:]==y[:,None],axis=1).mean())
     return result,cm
 
-def train(backend,dataset,variant,epochs=None,batch_size=128,seed=42,force=False):
+def _train(backend,dataset,variant,epochs=None,batch_size=128,seed=42,force=False):
     cfg=DATASETS[dataset];epochs=epochs or cfg['epochs']
     out=ROOT/'results'/f'{dataset}_{backend}_{variant}';out.mkdir(parents=True,exist_ok=True)
     if (out/'metrics.json').exists() and not force:
@@ -123,6 +123,15 @@ def train(backend,dataset,variant,epochs=None,batch_size=128,seed=42,force=False
     (out/'metrics.json').write_text(json.dumps(metrics,indent=2),encoding='utf-8')
     print('COMPLETE '+json.dumps(metrics),flush=True)
     return metrics
+
+def train(backend,dataset,variant,epochs=None,batch_size=128,seed=42,force=False):
+    # A notebook and the CLI may request the same configuration concurrently.
+    # Serialize that configuration; after waiting, reuse its complete results.
+    from filelock import FileLock
+    folder=ROOT/'results'/f'{dataset}_{backend}_{variant}'
+    folder.mkdir(parents=True,exist_ok=True)
+    with FileLock(str(folder/'.train.lock'),timeout=7200):
+        return _train(backend,dataset,variant,epochs,batch_size,seed,force)
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--backend',choices=['numpy','pytorch','tensorflow'],required=True)

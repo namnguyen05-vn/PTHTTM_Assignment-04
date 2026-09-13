@@ -1,0 +1,47 @@
+[
+  {
+    "dataset": "mnist",
+    "dtype": "uint8",
+    "pixel_min": 0,
+    "pixel_max": 255,
+    "finite": true,
+    "labels_valid": true,
+    "split_indices_disjoint": true,
+    "all_training_indices_used": true,
+    "unique_training_images": 60000,
+    "exact_image_hashes_shared_train_validation": 0,
+    "exact_image_hashes_shared_train_test": 0,
+    "exact_image_hashes_shared_validation_test": 0,
+    "duplicate_policy": "Keep official benchmark split; report exact pixel duplicates as a limitation. No post-test filtering."
+  },
+  {
+    "dataset": "cifar10",
+    "dtype": "uint8",
+    "pixel_min": 0,
+    "pixel_max": 255,
+    "finite": true,
+    "labels_valid": true,
+    "split_indices_disjoint": true,
+    "all_training_indices_used": true,
+    "unique_training_images": 50000,
+    "exact_image_hashes_shared_train_validation": 0,
+    "exact_image_hashes_shared_train_test": 0,
+    "exact_image_hashes_shared_validation_test": 0,
+    "duplicate_policy": "Keep official benchmark split; report exact pixel duplicates as a limitation. No post-test filtering."
+  },
+  {
+    "dataset": "cifar100",
+    "dtype": "uint8",
+    "pixel_min": 0,
+    "pixel_max": 255,
+    "finite": true,
+    "labels_valid": true,
+    "split_indices_disjoint": true,
+    "all_training_indices_used": true,
+    "unique_training_images": 49986,
+    "exact_image_hashes_shared_train_validation": 4,
+    "exact_image_hashes_shared_train_test": 8,
+    "exact_image_hashes_shared_validation_test": 2,
+    "duplicate_policy": "Keep official benchmark split; report exact pixel duplicates as a limitation. No post-test filtering."
+  }
+]
